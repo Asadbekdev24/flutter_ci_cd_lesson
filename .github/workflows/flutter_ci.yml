@@ -18,12 +18,13 @@ jobs:
       - name: Flutter Upgrade and Doctor
         run: |
           flutter upgrade
+          flutter doctor
           
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: latest
+          flutter-version: 'stable'
 
       - name: Install Dependencies
         run: flutter pub get
